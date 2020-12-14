@@ -29,8 +29,8 @@ StaticJsonDocument <capacity> doc;
 // DeserializationError err;
 
 
-// There is only one pixel on the board
-#define NUMPIXELS 1
+// There are three  pixels connected
+#define NUMPIXELS 3
 
 //Use these pin definitions for the ItsyBitsy M4
 #define DATAPIN    10
@@ -247,7 +247,10 @@ void loop(void)
 //    Serial.println(led.red);
 //    Serial.println(led.green);
 //    Serial.println(led.blue);
+    
     strip.setPixelColor(0, led.green, led.red, led.blue);
+    strip.setPixelColor(1, led.green, led.red, led.blue);
+    strip.setPixelColor(2, led.green, led.red, led.blue);
     //strip.setPixelColor(0, 255, 0, 0);
     //strip.setPixelColor(0, 0, 255, 0);
     strip.setBrightness(led.brightness);
